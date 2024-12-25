@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh ' docker build -t charan/charan_infotech:$BUILD_NUMBER .'
+                sh ' docker build -t saicharan016/charan_infotech:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push charan/charan_infotech:$BUILD_NUMBER'
+                sh 'docker push saicharan016/charan_infotech:$BUILD_NUMBER'
             }
         }
 }
